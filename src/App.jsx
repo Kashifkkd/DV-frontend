@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import Home from './pages/Home'
 import Dashboard from './pages/Dashboard'
 import ContactUs from './pages/ContactUs'
@@ -13,6 +13,8 @@ function App() {
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/account' element={<Account />} />
         <Route path='/contact-us' element={<ContactUs />} />
+        <Route path='/contact-us' element={<ContactUs />} />
+        <Route path='*' element={<Navigate to="/dashboard" />} />
       </Routes>
     </Router>
   )
